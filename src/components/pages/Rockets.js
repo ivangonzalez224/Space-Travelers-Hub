@@ -1,6 +1,10 @@
+import React from 'react';
+import RocketsList from '../RocketsList';
+
 const Rockets = () => (
+
   <div>
-    <h2>Rockets</h2>
+    <RocketsList />
   </div>
 );
 
