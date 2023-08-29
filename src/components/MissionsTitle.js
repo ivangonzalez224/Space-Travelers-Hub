@@ -7,8 +7,11 @@ const MissionsTitle = () => {
   const dispatch = useDispatch();
   const { missionItems } = useSelector((store) => store.missions);
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
+    if (missionItems.length === 0) {
+      dispatch(getMissions());
+    }
+  });
+
   return (
     <ul>
       <li>

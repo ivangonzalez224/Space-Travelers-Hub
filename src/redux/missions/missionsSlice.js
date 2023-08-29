@@ -8,7 +8,7 @@ export const getMissions = createAsyncThunk(
       const response = await axios.get(
         'https://api.spacexdata.com/v3/missions',
       );
-      const data = await response;
+      const data = response;
       return data.data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -25,9 +25,9 @@ const missionsSlice = createSlice({
   name: 'mission',
   initialState,
   reducers: {
-    joingMission: (state, action) => {
+    joinMission: (state, action) => {
       const missionId = action.payload;
-      const mission = state.missionItems.find((item) => item.mission_id === missionId);
+      const mission = state.missionItems.filter((item) => item.mission_id === missionId);
       if (mission) {
         if (mission.status === true) {
           mission.status = false;
@@ -47,5 +47,5 @@ const missionsSlice = createSlice({
   },
 });
 
-export const missionsAction = missionsSlice.actions;
+export const { joinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;

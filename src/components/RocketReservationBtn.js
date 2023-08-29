@@ -5,6 +5,8 @@ import { reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice'
 const RocketReservationBtn = ({ rocketId }) => {
   const dispatch = useDispatch();
   const reserved = useSelector((state) => {
+    console.log('rokets:' + state.rockets.rockets);
+    console.log(state.rockets);
     const rocket = state.rockets.rockets.find((rocket) => rocket.id === rocketId);
     return rocket.reserved;
   });
