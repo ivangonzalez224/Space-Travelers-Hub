@@ -4,7 +4,7 @@ import RocketReservationBtn from './RocketReservationBtn';
 const RocketsItem = ({
   id, rocketName, description, flickrImages,
 }) => (
-  <li>
+  <li className="rockets-listItems">
     <div className="rocketImage">
       <img src={flickrImages[0]} alt="rocket" />
     </div>
