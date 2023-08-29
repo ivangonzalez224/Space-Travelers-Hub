@@ -8,12 +8,14 @@ const RocketsList = () => {
   const rockets = useSelector((state) => state.rockets.rockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  });
 
   return (
-    <section>
-      <ul>
+    <section className="rockets-container">
+      <ul className="rockets-list">
         {rockets.map((rocket) => (
           <RocketsItem
             key={rocket.id}
