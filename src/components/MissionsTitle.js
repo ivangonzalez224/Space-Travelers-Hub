@@ -25,6 +25,7 @@ const MissionsTitle = () => {
       {missionItems.map((mission) => (
         <MissionsItem
           key={mission.mission_id}
+          missionId={mission.mission_id}
           missionName={mission.mission_name}
           description={mission.description}
           status={mission.status}

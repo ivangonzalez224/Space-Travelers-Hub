@@ -15,25 +15,19 @@ export const getMissions = createAsyncThunk(
     }
   },
 );
-
 const initialState = {
   missionItems: [],
   error: '',
 };
-
 const missionsSlice = createSlice({
   name: 'mission',
   initialState,
   reducers: {
     joinMission: (state, action) => {
       const missionId = action.payload;
-      const mission = state.missionItems.filter((item) => item.mission_id === missionId);
+      const mission = state.missionItems.find((item) => item.mission_id === missionId);
       if (mission) {
-        if (mission.status === true) {
-          mission.status = false;
-        } else {
-          mission.status = true;
-        }
+        mission.status = !mission.status;
       }
     },
   },
@@ -46,6 +40,5 @@ const missionsSlice = createSlice({
     });
   },
 });
-
 export const { joinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;

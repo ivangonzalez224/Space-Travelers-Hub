@@ -8,19 +8,13 @@ const MissionsItem = (
   },
 ) => {
   const dispatch = useDispatch();
-  const statusCheck = useSelector((store) => {
-    console.log('dispatch');
-    console.log(store.missions);
-    const missionCheck = store.missions.missionsItems.filter(
-      (mission) => mission.mission_id === missionId,
-    );
-    return missionCheck.status;
-  });
-
+  const mission = useSelector((store) => store.missions.missionItems.find(
+    (mission) => mission.mission_id === missionId,
+  ));
+  const statusCheck = mission ? mission.status : false;
   const joinSingleMission = () => {
     dispatch(joinMission(missionId));
   };
-
   return (
     <li>
       <span className="missionName">{missionName}</span>
@@ -32,6 +26,7 @@ const MissionsItem = (
         <button
           type="button"
           onClick={joinSingleMission}
+          className={statusCheck ? 'mission_btn btn_join' : 'mission_btn btn_leave'}
         >
           {statusCheck ? 'Leave Mission' : 'Join Mission'}
         </button>
@@ -39,7 +34,6 @@ const MissionsItem = (
     </li>
   );
 };
-
 MissionsItem.propTypes = {
   missionId: PropTypes.string.isRequired,
   missionName: PropTypes.string.isRequired,
