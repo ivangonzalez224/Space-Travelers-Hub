@@ -8,32 +8,27 @@ export const getMissions = createAsyncThunk(
       const response = await axios.get(
         'https://api.spacexdata.com/v3/missions',
       );
-      const data = await response;
-      data.data.forEach((key) => {
-        key.status = 'NOT A MEMBER';
-      });
+      const data = response;
       return data.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   },
 );
-
 const initialState = {
   missionItems: [],
   error: '',
 };
-
 const missionsSlice = createSlice({
   name: 'mission',
   initialState,
   reducers: {
-    joingMission: (state, action) => {
-      state.missionItems.push(action.payload);
-    },
-    leaveMission: (state, action) => {
+    joinMission: (state, action) => {
       const missionId = action.payload;
-      state.missionItems = state.missionItems.filter((item) => item.mission_id !== missionId);
+      const mission = state.missionItems.find((item) => item.mission_id === missionId);
+      if (mission) {
+        mission.status = !mission.status;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -45,6 +40,5 @@ const missionsSlice = createSlice({
     });
   },
 });
-
-export const missionsAction = missionsSlice.actions;
+export const { joinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
