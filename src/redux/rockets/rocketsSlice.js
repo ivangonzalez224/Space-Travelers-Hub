@@ -14,6 +14,26 @@ const rocketSlice = createSlice({
     rockets: [],
     status: null,
   },
+  reducers: {
+    reserveRocket: (state, action) => {
+      const rocketId = action.payload;
+      const rocket = state.rockets.find((rocket) => rocket.id === rocketId);
+      if (rocket) {
+        if (rocket.reserved === true) {
+          rocket.reserved = false;
+        } else {
+          rocket.reserved = true;
+        }
+      }
+    },
+    cancelReservation: (state, action) => {
+      const rocketId = action.payload;
+      const rocket = state.rockets.find((rocket) => rocket.id === rocketId);
+      if (rocket) {
+        rocket.reserved = false;
+      }
+    },
+  },
   extraReducers: {
     [fetchRockets.pending]: (state) => {
       state.status = 'loading';
@@ -29,4 +49,5 @@ const rocketSlice = createSlice({
   },
 });
 
+export const { reserveRocket, cancelReservation } = rocketSlice.actions;
 export default rocketSlice.reducer;
