@@ -9,7 +9,9 @@ export const getMissions = createAsyncThunk(
         'https://api.spacexdata.com/v3/missions',
       );
       const data = await response;
-      console.log(data.data);
+      data.data.forEach((key) => {
+        key.status = 'NOT A MEMBER';
+      });
       return data.data;
     } catch (error) {
       return rejectWithValue(error.message);

@@ -16,12 +16,13 @@ const MissionsTitle = () => {
   return (
     <ul>
       <li>
-        <div className="missions_title">
-          <span>Mission</span>
-          <span>Description</span>
-          <span>Status</span>
+        <span className="missionName">Mission</span>
+        <span className="missionDescrip">Description</span>
+        <span id="missionStatusWord" className="missionStatus">Status</span>
+        <div className="missionbuttons">
           <span> </span>
         </div>
+
       </li>
       {missionItems.map((mission) => (
         <MissionsItem key={mission.mission_id} {...mission} />
