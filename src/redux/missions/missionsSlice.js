@@ -9,9 +9,6 @@ export const getMissions = createAsyncThunk(
         'https://api.spacexdata.com/v3/missions',
       );
       const data = await response;
-      data.data.forEach((key) => {
-        key.status = 'NOT A MEMBER';
-      });
       return data.data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -29,11 +26,15 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     joingMission: (state, action) => {
-      state.missionItems.push(action.payload);
-    },
-    leaveMission: (state, action) => {
       const missionId = action.payload;
-      state.missionItems = state.missionItems.filter((item) => item.mission_id !== missionId);
+      const mission = state.missionItems.find((item) => item.mission_id === missionId);
+      if (mission) {
+        if (mission.status === true) {
+          mission.status = false;
+        } else {
+          mission.status = true;
+        }
+      }
     },
   },
   extraReducers: (builder) => {
