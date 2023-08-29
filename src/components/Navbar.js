@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import mainIcon from './images/planet.png';
 
 const links = [
-  { path: 'rockets', text: 'Rockets' },
+  { path: '', text: 'Rockets' },
   { path: 'missions', text: 'Missions' },
   { path: 'myProfile', text: 'My Profile' },
 ];

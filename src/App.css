@@ -6,14 +6,11 @@ body {
   background-color: #fff;
 }
 
-.main_container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
+main {
   width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  padding-bottom: 10%;
 }
 
 nav {
