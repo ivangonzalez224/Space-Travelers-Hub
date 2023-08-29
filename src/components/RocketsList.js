@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Stack from 'react-bootstrap/Stack';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import RocketsItem from './RocketsItem';
 
@@ -15,17 +16,20 @@ const RocketsList = () => {
 
   return (
     <section className="rockets-container">
-      <ul className="rockets-list">
-        {rockets.map((rocket) => (
-          <RocketsItem
-            key={rocket.id}
-            id={rocket.id}
-            rocketName={rocket.rocket_name}
-            description={rocket.description}
-            flickrImages={rocket.flickr_images}
-          />
-        ))}
-      </ul>
+      <Stack gap={5} className="rockets-header">
+        <ul className="p2">
+          {rockets.map((rocket) => (
+            <RocketsItem
+              key={rocket.id}
+              id={rocket.id}
+              rocketName={rocket.rocket_name}
+              description={rocket.description}
+              flickrImages={rocket.flickr_images}
+              reserved={rocket.reserved}
+            />
+          ))}
+        </ul>
+      </Stack>
     </section>
   );
 };
