@@ -1,10 +1,11 @@
+import MissionsProfile from '../MissionsProfile';
+import '../../assets/styles/profile.css';
+
 const MyProfile = () => (
-  <section>
+  <section className="myProfile_container">
     <article>
       <h2>My Missions</h2>
-      <ul>
-        <li>missions</li>
-      </ul>
+      <MissionsProfile />
     </article>
     <article>
       <h2>My Rockets</h2>
