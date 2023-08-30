@@ -28,7 +28,7 @@ const MissionsItem = (
       <div className="missionbuttons">
         <button
           type="button"
-          onClick={joinSingleMission}
+          onClick={statusCheck ? joinSingleMission : leaveSingleMission}
           className={statusCheck ? 'mission_btn btn_join' : 'mission_btn btn_leave'}
         >
           {statusCheck ? 'Leave Mission' : 'Join Mission'}
