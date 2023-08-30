@@ -20,7 +20,7 @@ const RocketReservationBtn = ({ rocketId }) => {
     <button
       type="button"
       onClick={reserved ? cancelReservationAction : reserveRocketAction}
-      className={reserved ? 'btn btn-danger' : 'btn btn-success'}
+      className={reserved ? 'btn-res btn-danger' : 'btn-res btn-success'}
     >
       {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
     </button>
