@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { joinMission } from '../redux/missions/missionsSlice';
+import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const MissionsItem = (
   {
@@ -14,6 +14,9 @@ const MissionsItem = (
   const statusCheck = mission ? mission.status : false;
   const joinSingleMission = () => {
     dispatch(joinMission(missionId));
+  };
+  const leaveSingleMission = () => {
+    dispatch(leaveMission(missionId));
   };
   return (
     <li>
