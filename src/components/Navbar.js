@@ -26,7 +26,6 @@ const NavBar = () => (
             <Nav.Link
               as={NavLink}
               to="/"
-              activeClassName="active-link "
             >
               Rockets
             </Nav.Link>
@@ -35,7 +34,6 @@ const NavBar = () => (
             <Nav.Link
               as={NavLink}
               to="/missions"
-              activeClassName="active-link"
             >
               Missions
             </Nav.Link>
@@ -45,7 +43,6 @@ const NavBar = () => (
             <Nav.Link
               as={NavLink}
               to="/myProfile"
-              activeClassName="active-link"
             >
               My Profile
             </Nav.Link>
