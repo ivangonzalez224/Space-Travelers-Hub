@@ -68,7 +68,7 @@
 }
 
 .missionDescrip {
-  width: 54%;
+  width: 64%;
 }
 
 .missionbuttons {
@@ -79,10 +79,21 @@
 }
 
 .mission_btn {
-  padding: 1%;
+  padding: 5%;
   align-self: center;
   justify-self: center;
   cursor: pointer;
+  border-radius: 5%;
+}
+
+.btn_join {
+  border: #e04e5d solid 1px;
+  color: #e04e5d;
+}
+
+.btn_leave {
+  border: #6d7176 solid 1px;
+  color: #6d7176;
 }
 
 #missionStatusWord {
