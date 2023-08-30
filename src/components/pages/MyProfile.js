@@ -1,4 +1,5 @@
 import MissionsProfile from '../MissionsProfile';
+import RocketsProfile from '../RocketsProfile';
 import '../../assets/styles/profile.css';
 
 const MyProfile = () => (
@@ -9,9 +10,7 @@ const MyProfile = () => (
     </article>
     <article>
       <h2>My Rockets</h2>
-      <ul>
-        <li>rockets</li>
-      </ul>
+      <RocketsProfile />
     </article>
   </section>
 );
