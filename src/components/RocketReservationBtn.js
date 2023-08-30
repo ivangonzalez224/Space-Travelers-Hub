@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import Button from 'react-bootstrap/Button';
 import { reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice';
 
 const RocketReservationBtn = ({ rocketId }) => {
@@ -17,13 +18,15 @@ const RocketReservationBtn = ({ rocketId }) => {
   };
 
   return (
-    <button
+    <Button
       type="button"
       onClick={reserved ? cancelReservationAction : reserveRocketAction}
-      className={reserved ? 'btn-res btn-danger' : 'btn-res btn-success'}
+      variant={reserved ? 'outline-secondary' : 'primary'}
+      size="lg"
+      className="mt-3"
     >
       {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-    </button>
+    </Button>
   );
 };
 
