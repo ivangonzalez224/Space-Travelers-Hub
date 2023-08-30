@@ -11,7 +11,7 @@ const MissionsItem = (
   const mission = useSelector((store) => store.missions.missionItems.find(
     (mission) => mission.mission_id === missionId,
   ));
-  const statusCheck = mission ? mission.status : false;
+  const statusCheck = mission.status;
   const joinSingleMission = () => {
     dispatch(joinMission(missionId));
   };
@@ -22,13 +22,17 @@ const MissionsItem = (
     <li>
       <span className="missionName">{missionName}</span>
       <span className="missionDescrip">{description}</span>
-      <span className="missionStatus">
-        {statusCheck ? 'Active Member' : 'NOT A MEMBER'}
+      <span className="status_container">
+        <p
+          className={statusCheck ? 'missionStatus status_join' : 'missionStatus status_leave'}
+        >
+          {statusCheck ? 'Active Member' : 'NOT A MEMBER'}
+        </p>
       </span>
       <div className="missionbuttons">
         <button
           type="button"
-          onClick={statusCheck ? joinSingleMission : leaveSingleMission}
+          onClick={statusCheck ? leaveSingleMission : joinSingleMission}
           className={statusCheck ? 'mission_btn btn_join' : 'mission_btn btn_leave'}
         >
           {statusCheck ? 'Leave Mission' : 'Join Mission'}

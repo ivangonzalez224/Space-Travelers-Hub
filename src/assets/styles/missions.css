@@ -45,12 +45,26 @@
   width: 8%;
 }
 
-.missionStatus {
+.status_container {
   display: flex;
   width: 15%;
-  height: 150px;
+  padding: 0;
   align-items: center;
   justify-content: center;
+}
+
+.missionStatus {
+  padding: 3%;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.status_join {
+  background-color: #23a2a9;
+}
+
+.status_leave {
+  background-color: #6d747e;
 }
 
 .missionDescrip {
@@ -64,7 +78,7 @@
   align-self: center;
 }
 
-ul li button {
+.mission_btn {
   padding: 1%;
   align-self: center;
   justify-self: center;

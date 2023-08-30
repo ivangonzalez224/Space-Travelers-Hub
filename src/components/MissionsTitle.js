@@ -17,7 +17,7 @@ const MissionsTitle = () => {
       <li>
         <span className="missionName">Mission</span>
         <span className="missionDescrip">Description</span>
-        <span id="missionStatusWord" className="missionStatus">Status</span>
+        <span id="missionStatusWord" className="status_container">Status</span>
         <div className="missionbuttons">
           <span> </span>
         </div>
