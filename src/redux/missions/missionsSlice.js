@@ -30,6 +30,22 @@ const missionsSlice = createSlice({
         mission.status = !mission.status;
       }
     },
+    leaveMission: (state, action) => {
+      const missionId = action.payload;
+      const newObject = state.missionItems.map((item) => {
+        if (item.mission_id === missionId) {
+          return {
+            ...item,
+            status: false,
+          };
+        }
+        return item;
+      });
+      return {
+        ...state,
+        missionItems: newObject,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getMissions.fulfilled, (state, action) => {
