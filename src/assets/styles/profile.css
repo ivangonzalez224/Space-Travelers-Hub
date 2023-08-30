@@ -1,1 +1,13 @@
- 
+.myProfile_container {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+article {
+  width: 40%;
+}
+
+h3 {
+  color: #686772;
+}
