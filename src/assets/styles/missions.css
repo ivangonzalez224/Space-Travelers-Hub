@@ -10,68 +10,10 @@
   width: 100%;
 }
 
-.missionList_container ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.missionList_container ul li {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  border-top: #646060 solid 1px;
-  border-left: #646060 solid 1px;
-  border-right: #646060 solid 1px;
-  box-sizing: border-box;
-}
-
-.missionList_container ul li:last-child {
-  border-bottom: #646060 solid 1px;
-}
-
-.missionList_container ul li:first-child {
-  font-weight: bold;
-}
-
-.missionList_container ul li span {
-  padding: 1% 2% 1% 1%;
-  border-right: #646060 solid 1px;
-}
-
 .missionName {
   width: 8%;
 }
 
-.missionStatus {
-  display: flex;
-  width: 15%;
-  height: 150px;
-  align-items: center;
-  justify-content: center;
-}
-
 .missionDescrip {
-  width: 54%;
-}
-
-.missionbuttons {
-  width: 12%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
-
-ul li button {
-  padding: 1%;
-  align-self: center;
-  justify-self: center;
-  cursor: pointer;
-}
-
-#missionStatusWord {
-  justify-content: flex-start;
-  height: max-content;
+  width: 68%;
 }
