@@ -20,11 +20,11 @@ const RocketsItem = ({
           <h2 className="rocketName">{rocketName}</h2>
           <div className="rocketDescription-container">
             {reserved && (
-            <Badge bg="info" className="ml-3 mr-4">
+            <Badge bg="info" className="ml-3 mr-4" style={{ fontSize: '14px' }}>
               Reserved
             </Badge>
             )}
-            <span className="ml-3">{description}</span>
+            <span className="ml-3" style={{ fontSize: '18px' }}>{description}</span>
           </div>
         </div>
         <RocketReservationBtn rocketId={id} />
