@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
-import { reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice';
+import { reserveRocket, cancelReservation } from '../../redux/rockets/rocketsSlice';
 
 const RocketReservationBtn = ({ rocketId }) => {
   const dispatch = useDispatch();

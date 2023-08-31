@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
-import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
+import { joinMission, leaveMission } from '../../redux/missions/missionsSlice';
 
 const MissionsItem = (
   {

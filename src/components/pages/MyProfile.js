@@ -1,5 +1,5 @@
-import MissionsProfile from '../MissionsProfile';
-import RocketsProfile from '../RocketsProfile';
+import MissionsProfile from '../missions/MissionsProfile';
+import RocketsProfile from '../rockets/RocketsProfile';
 import '../../assets/styles/profile.css';
 
 const MyProfile = () => (

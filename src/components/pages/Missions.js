@@ -1,4 +1,4 @@
-import MissionsLogic from '../MissionsLogic';
+import MissionsLogic from '../missions/MissionsLogic';
 import '../../assets/styles/missions.css';
 
 const Missions = () => (
