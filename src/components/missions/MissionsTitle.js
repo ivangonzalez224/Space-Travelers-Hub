@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MissionsItem from './MissionsItem';
-import { getMissions } from '../redux/missions/missionsSlice';
+import { getMissions } from '../../redux/missions/missionsSlice';
 
 const MissionsTitle = () => {
   const dispatch = useDispatch();

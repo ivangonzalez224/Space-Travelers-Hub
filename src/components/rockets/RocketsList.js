@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Container from 'react-bootstrap/Container';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { fetchRockets } from '../../redux/rockets/rocketsSlice';
 import RocketsItem from './RocketsItem';
 
 const RocketsList = () => {

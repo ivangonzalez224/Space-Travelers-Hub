@@ -1,5 +1,5 @@
 import React from 'react';
-import RocketsList from '../RocketsList';
+import RocketsList from '../rockets/RocketsList';
 
 const Rockets = () => (
 
