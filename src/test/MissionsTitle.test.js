@@ -43,3 +43,16 @@ test('change join status', async () => {
 
   expect(screen.getByText('Active Member')).toBeInTheDocument();
 });
+
+test('Missions component renders correctly the number of join mission buttons', async () => {
+  render(
+    <Provider store={store}>
+      <Missions />
+    </Provider>,
+  );
+
+  await waitFor(() => {
+    const rockets = screen.getAllByText('Join Mission');
+    expect(rockets.length).toBe(9);
+  });
+});
