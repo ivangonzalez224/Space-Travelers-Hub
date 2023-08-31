@@ -1,7 +1,13 @@
-<div align="center"> 
-  <h3><b>Space-Travelers-Hub</b></h3>
-  <h5>Ivan Gonzalez</h5> 
+
+  <p align="center">
+   <img src="./src/assets/images/space-travel-icon.png" width="250" />
+  </p>
+   <br>
+<div align="center">
+  <h2><b>Space-Travelers-Hub</b></h2>
+  <h4>Ivan Gonzalez & Karim Barragan</h4> 
 </div>
+<br>
 
 # 📗 Table of Contents
 
@@ -23,13 +29,14 @@
 
 # 📖 Space-Travelers-Hub <a name="about-project"></a>
 
-**Space-Travelers-Hub** is a web app using React to display add book rockets, and display and join missions.
+**Space-Travelers-Hub** is a web app that allows users to book rockets and join space missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 1. React
-2. CSS
-3. JavaScript
+2. React-Bootstrap
+3. Jest
+4. React-Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -38,16 +45,17 @@ In this project we use React to build a space travelers' hub web app.
   <summary>Client</summary>
   <ul>
     <li><a href="https://es.react.dev/">React</a></li>
-    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
-    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://react-bootstrap.github.io/">React-Bootstrap</a></li>
+    <li><a href="https://jestjs.io/">Jest</a></li>
+    <li><a href="https://react-redux.js.org/">React-Redux</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-- Add a professional README.md file.
-- Use React & Redux in order to build the whole project.
-- Set up linters for the project.
+- Reserve and cancel rockets for missions.
+- Join and leave missions.
+- Dashboard with rockets reserved and missions joined.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,12 +109,19 @@ To run the project, do the following:
 - Twitter: [@ivang2204](https://twitter.com/ivang2204)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/iván-gonzalez-robles-957491275)
 
+👤 **Karim Barragan**
+
+- GitHub: [@Rebelzob](https://github.com/Rebelzob)
+- LinkedIn: [Karim-Barragan](https://www.linkedin.com/in/karim-barragan/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛩️ Future Features <a name="future-features"></a>
 
-- Add a feature that allows to add better animations to the buttons.
+- Add readmore button to missions.
+- Add cancel mission button to missions.
+- Add cancel rocket button to rockets.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,13 +135,13 @@ Feel free to check the [issues page](https://github.com/ivangonzalez224/Space-Tr
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a star.
+If you like this project give it a ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Micoverse.
+I would like to thank Microverse for the oportunity given to me to work in this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
