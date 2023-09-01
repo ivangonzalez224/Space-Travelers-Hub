@@ -62,7 +62,7 @@ In this project we use React to build a space travelers' hub web app.
 
 # Getting Started <a name="getting-started"></a>
 
-In this project it is used React to build a bookstore web app.
+In this project it is used React to build a space travelers' hub web app.
 
 ### Setup
 
