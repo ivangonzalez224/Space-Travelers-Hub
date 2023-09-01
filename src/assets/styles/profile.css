@@ -2,6 +2,7 @@
   display: flex;
   width: 90%;
   justify-content: space-around;
+  padding: 1% 0;
 }
 
 article {
