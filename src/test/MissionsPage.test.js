@@ -17,3 +17,15 @@ test('Missions component renders correctly the mission name', async () => {
     expect(screen.getByText('Thaicom')).toBeInTheDocument();
   });
 });
+
+test('Missions component renders correctly the mission description', async () => {
+    render(
+      <Provider store={store}>
+        <Missions />
+      </Provider>,
+    );
+  
+    await waitFor(() => {
+      expect(screen.getByText('Commercial Resupply Services')).toBeInTheDocument();
+    });
+  });
