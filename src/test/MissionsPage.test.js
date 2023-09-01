@@ -29,3 +29,19 @@ test('Missions component renders correctly the mission description', async () =>
       expect(screen.getByText('Commercial Resupply Services')).toBeInTheDocument();
     });
   });
+
+  test('change join status', async () => {
+    render(
+      <Provider store={store}>
+        <Missions />
+      </Provider>,
+    );
+  
+    await waitFor(() => {
+      const joinButtons = screen.getAllByText('Join Mission');
+  
+      fireEvent.click(joinButtons[0]);
+    });
+  
+    expect(screen.getByText('Active Member')).toBeInTheDocument();
+  });  
