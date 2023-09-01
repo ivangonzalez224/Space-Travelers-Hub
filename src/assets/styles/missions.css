@@ -1,0 +1,19 @@
+.main_missions {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.missionList_container {
+  width: 100%;
+}
+
+.missionName {
+  width: 8%;
+}
+
+.missionDescrip {
+  width: 68%;
+}

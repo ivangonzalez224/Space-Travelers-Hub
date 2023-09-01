@@ -1,0 +1,4 @@
+.active {
+  color: #007bff !important; /* set the primary color */
+  text-decoration: underline !important; /* add an underline */
+}
